@@ -1,5 +1,7 @@
 class CLI
-    def initialize
-        
+
+    def run
+        puts "Welcome!"
     end
+    
 end
