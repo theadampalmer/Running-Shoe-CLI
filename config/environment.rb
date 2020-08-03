@@ -4,7 +4,12 @@ require 'httparty'
 require 'nokogiri'
 
 require_relative '../lib/cli.rb'
-require_relative '../lib/api.rb'
-require_relative '../lib/office_quotes.rb'
-#one dot means look in current folder, two dots means look where i'm at and up one from there
+require_relative '../lib/everyday.rb'
+require_relative '../lib/marathon.rb'
+require_relative '../lib/speedwork.rb'
+require_relative '../lib/trailrunner.rb'
+require_relative '../lib/web_scraper.rb'
+
+
+
 
