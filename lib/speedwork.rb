@@ -1,9 +1,14 @@
-require_relative "./everyday.rb"
+class Speedwork
+    attr_accessor :name, :model, :price, :description
+    @@all = []
 
-class Speedwork < Everyday
-    
-    def self.all
-        Scraper.scrape_speedwork
+    def initialize(hash)
+        hash.each {|attribute, value| self.send("#{attribute}=", value)}
+        @@all << self
     end
-      
+
+    def self.all
+        @@all
+    end
+
 end

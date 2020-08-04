@@ -1,9 +1,14 @@
-require_relative "./everyday.rb"
+class Trailrunner
+    attr_accessor :name, :model, :price, :description
+    @@all = []
 
-class Trailrunner < Everyday
-    
-    def self.all
-        Scraper.scrape_trailrunner
+    def initialize(hash)
+        hash.each {|attribute, value| self.send("#{attribute}=", value)}
+        @@all << self
     end
-      
+
+    def self.all
+        @@all
+    end
+
 end

@@ -1,14 +1,14 @@
 class Everyday
-    attr_accessor :name
+    attr_accessor :name, :model, :price, :description
     @@all = []
 
-    def initialize(name)
-        @name = name
+    def initialize(hash)
+        hash.each {|attribute, value| self.send("#{attribute}=", value)}
         @@all << self
     end
 
     def self.all
-        Scraper.scrape_everyday
+        @@all
     end
 
 end
