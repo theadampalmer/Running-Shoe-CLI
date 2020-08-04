@@ -6,7 +6,7 @@ class CLI
     puts '*******Welcome to the Unofficial Nike Running Shoe Selector!********'.black.on_green
     puts '********************************************************************'.black.on_green
     puts "\n      With this app, you will receive recommendations for the"
-    puts "  top-rated running shoe for several different runner catagories.\n"
+    puts "  top-rated running shoe for several different runner categories.\n"
     puts "\n   Need a great shoe for marathons?? How about for trailrunning?"
     puts "\n          What kind of running shoe are you looking for??\n"
     user_input = ' '
@@ -23,7 +23,7 @@ class CLI
       when 'trailrunner'
         get_shoes('https://www.nike.com/t/air-zoom-terra-kiger-6-womens-trail-running-shoe-CnfDJ2/CJ0220-200')
       when 'exit'
-        puts "\n     Godspeed!\n Have a great day!!".red
+        puts "\nThanks for using Running Shoe Selector!\n           Have a great day!!".red
       end
       end
   end
