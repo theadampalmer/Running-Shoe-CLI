@@ -11,7 +11,7 @@ class CLI
     puts "\n          What kind of running shoe are you looking for??\n"
     user_input = ' '
     until user_input == 'exit'
-      puts "\n You can say: everyday, marathon, speedwork, trailrunner, or exit.\n".green
+      puts "\n\nYou can say: everyday, marathon, speedwork, trailrunner, or exit.\n".green
       user_input = gets.chomp
       case user_input # case statements can be used in lieu of if/elsif and use 'case' and 'when' and 'else'
       when 'everyday'
@@ -28,12 +28,12 @@ class CLI
       end
   end
 
-  # 1. should scrape URL (Scraper.scrape_everyday) 2. create objects with data we scraped 3. puts out the info
+  # 1. should scrape URL (Scraper.scrape_everyday) 2. create objects with data scraped 3. puts out the info
   def get_shoes(url)
     shoe_hash = Scraper.scrape_shoe(url)
     Everyday.new(shoe_hash)
     Everyday.all.each do |shoe|
-      puts "\nModel: ".colorize(:green) + shoe.model.to_s
+      puts "\n\n\n\n\nModel: ".colorize(:green) + shoe.model.to_s #to_s turns object into string
       puts "\nPrice: ".colorize(:green) + shoe.price.to_s
       puts "\nDescription: ".colorize(:green) + shoe.description.to_s
     end
