@@ -6,9 +6,9 @@ The app introduces itself and asks the user and provides a description of the ap
 Installation & Instructions
 To run this application in your local environment, follow these steps:
 
-Fork and clone this repository
-Type ruby bin/run
-Follow the prompts of acceptable inputs
+1. Fork and clone this repository
+2. Type ruby bin/run
+3. Follow the prompts of acceptable inputs
 
 Sample
 ********************************************************************
