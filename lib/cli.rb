@@ -25,7 +25,7 @@ class CLI
       when 'exit'
         puts "\nThanks for using Running Shoe Selector!\n           Have a great day!!".red
       end
-      end
+    end
   end
 
   # 1. should scrape URL (Scraper.scrape_everyday) 2. create objects with data scraped 3. puts out the info
