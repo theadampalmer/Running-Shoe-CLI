@@ -33,7 +33,7 @@ class CLI
     shoe_hash = Scraper.scrape_shoe(url)
     Everyday.new(shoe_hash)
     Everyday.all.each do |shoe|
-      puts "\n\n\n\n\nModel: ".colorize(:green) + shoe.model.to_s #to_s turns object into string
+      puts "\n\n\n\n\nModel: ".colorize(:green) + shoe.model.to_s
       puts "\nPrice: ".colorize(:green) + shoe.price.to_s
       puts "\nDescription: ".colorize(:green) + shoe.description.to_s
     end

@@ -13,4 +13,4 @@ class Scraper
     everyday_shoe
   end
 end
-# children[0].text
+
