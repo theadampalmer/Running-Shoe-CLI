@@ -5,7 +5,6 @@ Running Shoe Selector is a command line interface that allows the user to receiv
 The app introduces itself and asks the user and provides a description of the app's functionality. When the user inputs the type of running shoe that they are looking for, the app will return the suggested shoe for that runner type - including model, price and a brief description. When the user types in 'exit', the app will say a brief goodbye message.
 
 ## Installation & Instructions
-
 To run this application in your local environment, follow these steps:
 
 ```bash
