@@ -1,7 +1,6 @@
-# require 'pry'
-# require 'colorize'
 class CLI
-  def run
+  
+  def welcome
     puts '********************************************************************'.black.on_green
     puts '*******Welcome to the Unofficial Nike Running Shoe Selector!********'.black.on_green
     puts '********************************************************************'.black.on_green
@@ -9,6 +8,10 @@ class CLI
     puts "  top-rated running shoe for several different runner categories.\n"
     puts "\n   Need a great shoe for marathons?? How about for trailrunning?"
     puts "\n          What kind of running shoe are you looking for??\n"
+  end
+
+  def run
+    self.welcome
     user_input = " "
     until user_input == "exit"
       puts "\n\nYou can say: everyday, marathon, speedwork, trailrunner, or exit.\n".green
@@ -30,12 +33,13 @@ class CLI
 
   # 1. should scrape URL (Scraper.scrape_everyday) 2. create objects with data scraped 3. puts out the info
   def get_shoes(url)
-    shoe_hash = Scraper.scrape_shoe(url)
-    Shoe.new(shoe_hash)
-    Shoe.all.each do |shoe| #return value of each is the original array
-      puts "\n\n\n\n\nModel: ".colorize(:green) + shoe.model.to_s
-      puts "\nPrice: ".colorize(:green) + shoe.price.to_s
-      puts "\nDescription: ".colorize(:green) + shoe.description.to_s
-    end
+    new_shoe = Shoe.find_or_create_shoe(url)
+      self.display_shoe_details(new_shoe)
   end
-end
+
+  def display_shoe_details(new_shoe)
+      puts "\n\n\n\n\nModel: ".colorize(:green) + new_shoe.model.to_s
+      puts "\nPrice: ".colorize(:green) + new_shoe.price.to_s
+      puts "\nDescription: ".colorize(:green) + new_shoe.description.to_s
+  end
+end 
