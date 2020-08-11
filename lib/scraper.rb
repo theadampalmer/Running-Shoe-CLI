@@ -1,7 +1,7 @@
-require 'pry'
-require 'httparty'
-require 'nokogiri'
-require 'open-uri'
+# require 'pry'
+# require 'httparty'
+# require 'nokogiri'
+# require 'open-uri'
 
 class Scraper
   def self.scrape_shoe(url)
